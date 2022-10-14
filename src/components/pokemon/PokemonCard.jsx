@@ -62,7 +62,7 @@ const PokemonCard = ({ name, url }) => {
     dispatch({ type: ACTION.SET_CARD_INDEX, payload: pngIndex });
 
     pokemonDataFetch();
-  }, [state.pokeIndex]);
+  }, [name, url]);
 
   return state.loading ? (
     <div className='col-md-3 col-sm-6 mb-5'>
