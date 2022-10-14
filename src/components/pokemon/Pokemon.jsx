@@ -133,6 +133,8 @@ const Pokemon = () => {
           case "special-defense":
             specialDefense = stat["base_stat"];
             break;
+          default:
+            break;
         }
       });
 
