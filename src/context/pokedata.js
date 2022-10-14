@@ -16,7 +16,7 @@ export const PokedataProvider = ({ children }) => {
 
   const handleSearch = (e) => {
     const resultsArray = state.pokemons.filter((pokemon) =>
-      pokemon.name.includes(e.target.value)
+      pokemon.name.includes(e.target.value.toLowerCase())
     );
 
     dispatch({ type: ACTION.SET_SEARCH, payload: resultsArray });
