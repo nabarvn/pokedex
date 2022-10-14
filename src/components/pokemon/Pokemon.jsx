@@ -52,12 +52,11 @@ const Pokemon = () => {
           (flavor.language.name = "en") &&
           (flavor.language.url = "https://pokeapi.co/api/v2/language/9/")
         ) {
-          dispatch({
+          return dispatch({
             type: ACTION.SET_DESCRIPTION,
             payload: flavor.flavor_text,
           });
         }
-        return;
       });
 
       // Gender Related Stats
@@ -116,25 +115,19 @@ const Pokemon = () => {
       pokemonData.stats.map((stat) => {
         switch (stat.stat.name) {
           case "hp":
-            hp = stat["base_stat"];
-            break;
+            return (hp = stat["base_stat"]);
           case "attack":
-            attack = stat["base_stat"];
-            break;
+            return (attack = stat["base_stat"]);
           case "defense":
-            defense = stat["base_stat"];
-            break;
+            return (defense = stat["base_stat"]);
           case "speed":
-            speed = stat["base_stat"];
-            break;
+            return (speed = stat["base_stat"]);
           case "special-attack":
-            specialAttack = stat["base_stat"];
-            break;
+            return (specialAttack = stat["base_stat"]);
           case "special-defense":
-            specialDefense = stat["base_stat"];
-            break;
+            return (specialDefense = stat["base_stat"]);
           default:
-            break;
+            return;
         }
       });
 
