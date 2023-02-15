@@ -52,7 +52,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 
 <div align="center">
-  <img src="./screenshot.png">
+  <img src="src/assets/screenshot.png">
 </div>
 
 <p align="center">
